@@ -2,12 +2,16 @@ package com.gfarkas;
 
 public class Factorial {
 
-    public int getFactorial(int val) {
+    public long getFactorial(int val) {
         return factorial(val);
     }
 
-    private int factorial(int val) {
-        int result = 1;
+    public long getFactorialRecursive(int val) {
+        return factorialRecursive(val);
+    }
+
+    private long factorial(int val) {
+        long result = 1;
         for (int i = 1; i <= val ; i++) {
             result *= i;
         }
@@ -15,7 +19,7 @@ public class Factorial {
         return result;
     }
 
-    private int factorialRecursive(int val) {
+    private long factorialRecursive(int val) {
         if (val >= 1) {
             return val * factorialRecursive(val - 1);
         } else {
